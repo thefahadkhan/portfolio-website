@@ -1,0 +1,176 @@
+.client-feedback-container {
+  width: calc(100% - 30px);
+  margin: 0 auto;
+  position: relative;
+  top: -12px;
+}
+
+.testimonials-heading-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f2f3;
+  border-radius: 13px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.testimonials-heading h2 {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.testimonials-heading svg {
+  font-size: 1.3rem;
+  color: #333;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+
+.testimonials-heading {
+  color: #333;
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.feedback-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.feedback-card {
+  position: relative;
+  overflow: hidden;
+  background-color: #F6F6F6;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rating {
+  color: #ffc107;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+
+
+
+.image-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.feedback-image,
+.feedback-image-single {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: 5px solid #fff;
+}
+
+/* First image should not be shifted */
+.feedback-image:first-child,
+.feedback-image-single:first-child {
+  left: 50px;
+  bottom: 20px;
+  transform: rotate(-7deg);
+  z-index: 2;
+}
+
+.feedback-image:not(:first-child),
+.feedback-image-single:not(:first-child) {
+  left: -70px;
+  /* move to the left */
+  z-index: 1;
+}
+
+
+.feedback-title {
+  color: #333;
+  font-size: 1.9rem;
+  font-weight: 400;
+  max-width: 350px;
+  margin-bottom: 10px;
+}
+
+.feedback-text {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.client-info {
+  display: flex;
+  align-items: center;
+}
+
+.client-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.client-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.client-name {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.client-company {
+  color: #777;
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+.height-adjest {
+  position: relative;
+  height: 300px;
+}
+
+.absolute {
+  position: relative;
+  bottom: 220px;
+}
+
+
+/* Responsive adjustments (optional, but good practice) */
+@media (max-width: 768px) {
+  .feedback-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-heading {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-feedback-container {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .testimonials-heading {
+    font-size: 1.3rem;
+  }
+}
